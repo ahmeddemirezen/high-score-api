@@ -4,31 +4,34 @@ full structure of conf.json
 
 ```json
 {
-    "server": {
-        "host": "localhost",
-        "port": 8080,
-        "route": "/api/v1",
-        "username": "ahmed",
-        "password": "123456"
-    },
-    "app": {
-        "name": "My App",
-        "version": "1.0.0",
-        "description": "My App Description",
-        "author": "My Name",
-        "license": "MIT",
-        "website": "https://www.widegamestudio.com"
-    },
-    "MySQL": {
-        "host": "localhost",
-        "port": 3306,
-        "user": "root",
-        "password": "",
-        "database": "flare_frenzy"
-    },
-    "SQLite3": {
-        "database": "flare_frenzy"
-    },
-    "debug": true
+"server": {
+    "host": "localhost",
+    "port": 8080,
+    "route": "/api/v1",
+    "auth": {
+        "username": "admin",
+        "password": "admin"
+    }
+},
+"app": {
+    "name": "High Score API",
+    "version": "1.0.0",
+    "description": "This is high score api",
+    "author": "ahmmeddemirezen",
+    "license": "MIT",
+    "website": "https://ahmeddemirezen.github.io"
+},
+"MySQL": {
+    "host": "localhost",
+    "port": 3306,
+    "user": "root",
+    "password": "",
+    "database": "my_db"
+},
+"SQLite3": {
+    "database": "my_db"
+},
+"debug": true
 }
+
 ```
