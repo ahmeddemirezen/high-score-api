@@ -9,15 +9,15 @@
     }
 },
 "app": {
-    "name": "Flare Frenzy API",
+    "name": "High Score API",
     "version": "1.0.0",
-    "description": "This is the high score api for Flare Frenzy",
+    "description": "This is high score api",
     "author": "ahmmeddemirezen",
     "license": "MIT",
-    "website": "https://www.widegamestudio.com"
+    "website": "https://ahmeddemirezen.github.io"
 },
 "SQLite3": {
-    "database": "flare_frenzy"
+    "database": "my_db"
 },
 "debug": true
 }
