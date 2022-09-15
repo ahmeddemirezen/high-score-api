@@ -1,3 +1,5 @@
+#### [Documentation](https://github.com/ahmeddemirezen/high-score-api/wiki/Documentation)
+
 full structure of conf.json
 
 ***
