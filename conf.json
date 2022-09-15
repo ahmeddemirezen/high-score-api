@@ -1,0 +1,23 @@
+{
+"server": {
+    "host": "localhost",
+    "port": 8080,
+    "route": "/api/v1",
+    "auth": {
+        "username": "admin",
+        "password": "admin"
+    }
+},
+"app": {
+    "name": "Flare Frenzy API",
+    "version": "1.0.0",
+    "description": "This is the high score api for Flare Frenzy",
+    "author": "ahmmeddemirezen",
+    "license": "MIT",
+    "website": "https://www.widegamestudio.com"
+},
+"SQLite3": {
+    "database": "flare_frenzy"
+},
+"debug": true
+}
