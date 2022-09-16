@@ -9,7 +9,7 @@
     }
 },
 "app": {
-    "name": "High Score API",
+    "name": "High Score",
     "version": "1.0.0",
     "description": "This is high score api",
     "author": "ahmmeddemirezen",

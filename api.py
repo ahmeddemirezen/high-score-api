@@ -3,7 +3,9 @@ from db import DB, Users, Scores, HighScores
 import json
 import flask
 from flask_httpauth import HTTPBasicAuth
+from flask import send_from_directory
 import random
+import utilities as util
 
 config = {}
 with open("conf.json", "r") as f:
@@ -11,13 +13,24 @@ with open("conf.json", "r") as f:
 
 db = DB(config)
 
-app = flask.Flask(__name__)
+app = flask.Flask(__name__,
+                  static_url_path='',
+                  static_folder='web/static',
+                  template_folder='web/templates')
 auth = HTTPBasicAuth()
+
+index = open("web/static/index.html", "r").read()
 
 
 @app.route('/', methods=['GET'])
 def home():
-    return "<h1>Welcome to the %s!</h1><p>%s</p><div><span>Version: %s</span></br><span>Author: %s</span></br><span>License: %s</span></br><a href='%s'>For more detail...</a></div>" % (config["app"]["name"], config["app"]["description"], config["app"]["version"], config["app"]["author"], config["app"]["license"], config["app"]["website"])
+    return util.params_to_html(index, config['app'])
+    # return send_from_directory(app.static_folder, 'index.html')
+
+
+@app.route('/docs', methods=['GET'])
+def docs():
+    return send_from_directory(app.static_folder, 'docs.html')
 
 
 @auth.verify_password
